@@ -92,6 +92,7 @@ header.fixed{
 	position: fixed;
 	border-color: #eeeeee;
 	animation: fixHeader .5s ease;
+	z-index: 11;
 }
 
 @keyframes fixHeader
@@ -410,7 +411,7 @@ header .navbar ul li a.active::before{
 /*My beliefs*/
 
 .beliefs{
-	padding: 100px 0px 70px;
+	padding: 100px 15px 70px;
 	background-color: #f5f8fd;
 }
 
@@ -1109,3 +1110,78 @@ footer .social a:hover{
 	font-weight: 400;
 }
 
+.ham-burger .fa
+{
+	font-size: 20px;
+	height: 30px;
+	width: 30px;
+	background-color: #ffffff;
+	color: #000000;
+	border-radius: 3px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	display: none;
+	border: 1px solid #eeeeee;
+}
+
+@media(max-width: 991px)
+{
+	.home .home-content .block h1{
+		font-size: 50px;
+	}	
+}
+
+@media(max-width: 767px)
+{	
+	header
+	{
+		padding: 15px; 
+		position: fixed;
+		background-color: #ffffff;
+		border: none;
+	}
+	
+	header .brand-name a
+	{
+		color: #000000;
+
+	}
+	.ham-burger .fa
+	{
+		display: inline-block;
+	}
+
+	.navbar
+	{
+		position: absolute;
+		background-color: #ffffff;
+		width: 100%;
+		left: 0px;
+		top: 60px;
+		padding: 15px;
+		border-top: 1px solid #eeeeee;
+		display: none;
+	}
+
+	.navbar.show
+	{
+		display: block;
+	}
+	header .navbar ul li
+	{
+		display: block;
+		margin-left: 0;
+	}
+
+	header .navbar ul li a
+	{
+		line-height: 42px;
+		color: #000000;
+	}
+
+	header .navbar ul li a::before
+	{
+		background-color: #febd01;
+	}
+}

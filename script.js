@@ -205,5 +205,15 @@ const navbar= document.querySelector(".navbar");
 	  			a[i].classList.remove("active")
 	  		}
 	  		this.classList.add("active")
+	  		document.querySelector(".navbar").classList.toggle("show");
+
 	  	})
 	  })
+
+// ham-burger
+	const hamBurger=document.querySelector(".ham-burger")
+
+	hamBurger.addEventListener("click", function()
+	{
+		document.querySelector(".navbar").classList.toggle("show");
+	})
