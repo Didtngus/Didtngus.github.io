@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,600;1,900&display=swap');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
+html{
+	scroll-behavior: smooth;
+}
+
 body{
 	background-color: skyblue;
 	margin:0;
@@ -83,6 +87,25 @@ header{
 	height: 80px; /*what I added*/
 }
 
+header.fixed{
+	background-color: #fff;
+	position: fixed;
+	border-color: #eeeeee;
+	animation: fixHeader .5s ease;
+}
+
+@keyframes fixHeader
+{
+	0%
+	{
+		transform: translateY(-100%);
+	}
+	100%
+	{
+		transform: translateY(0%);
+	}
+}
+
 header .row{
 	justify-content: space-between;
 	align-items: center; 
@@ -95,6 +118,10 @@ header .brand-name a{
 	color: #FFFFFF;
 	text-transform: uppercase;
 	position: relative;
+}
+
+header.fixed .brand-name a{
+	color: #000000;
 }
 
 header .navbar ul{
@@ -118,6 +145,10 @@ header .navbar ul li a{
 	position: relative;
 }
 
+header.fixed .navbar ul li a{
+	color: #000000;
+}
+
 header .navbar ul li a::before{
 	content: '';
 	height: 3px;
@@ -127,6 +158,10 @@ header .navbar ul li a::before{
 	right: 0px;
 	top: 150%;/*bottom: -1px; with the display block above */ 
 	transition: all .5s ease;
+}
+
+header.fixed .navbar ul li a::before{
+	background-color: #febd01;
 }
 
 header .navbar ul li a:hover::before{
