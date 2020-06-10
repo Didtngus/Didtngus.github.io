@@ -172,23 +172,11 @@
 	window.onload=load();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	// header fixed
 
-	window.onscroll=function(){
+	window.onscroll=function()
+	{
+		console.log(document.documentElement.ScrollTop);
 		const docScrollTop = document.documentElement.ScrollTop;
 
 		if (window.innerWidth>991)
