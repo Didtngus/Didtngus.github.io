@@ -487,6 +487,7 @@ header .navbar ul li a.active::before{
 	line-height: 20px;
 	color: #838383;
 	margin:10px 0 10px;
+	margin-top: 10%;
 }
 
 
